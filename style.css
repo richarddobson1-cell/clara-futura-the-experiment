@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 640px;
   padding: 110px 28px 80px;
   display: flex; align-items: center; justify-content: center;
   background:
@@ -752,7 +752,7 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 @media (max-width: 860px) {
   html, body { font-size: 16px; }
-  .hero { min-height: 88vh; padding: 90px 22px 70px; }
+  .hero { min-height: 540px; padding: 90px 22px 70px; }
   .hero-tagline span { display: inline; }
   .hero-tagline span + span::before { content: ' '; }
 
