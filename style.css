@@ -88,8 +88,8 @@ img { max-width: 100%; display: block; }
 .cf-cursor.is-down { width: 24px; height: 24px; margin: -12px 0 0 -12px; }
 
 /* Reveal */
-.reveal, .duo-card { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
-.reveal.in, .duo-card.in { opacity: 1; transform: none; }
+/* Reveal animation removed per user request — content is visible on load. */
+.reveal, .duo-card { opacity: 1; transform: none; }
 
 /* ============================================================
    HERO
