@@ -273,6 +273,24 @@ img { max-width: 100%; display: block; }
   grid-template-columns: 1fr 1fr;
   gap: 56px;
   margin-top: 40px;
+  align-items: start;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Pull the two portraits close so they read as a paired duo, with bios falling below */
+.duo-photos-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin: 36px auto 44px;
+  max-width: 520px;
+}
+.duo-photos-row .duo-photo-wrap { margin: 0; width: 184px; height: 184px; }
+@media (max-width: 860px) {
+  .duo-photos-row { gap: 12px; max-width: 360px; }
+  .duo-photos-row .duo-photo-wrap { width: 138px; height: 138px; }
 }
 .duo-card {
   text-align: center;
