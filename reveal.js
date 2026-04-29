@@ -2,7 +2,12 @@
 (function () {
   if (typeof window === 'undefined') return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) {
+  // In iframe (no parent scroll inside), or reduced motion, reveal immediately —
+  // IntersectionObserver in an iframe with scrolling="no" never fires for content
+  // outside the initial seed viewport, leaving the page looking blank below the fold.
+  var inIframe = false;
+  try { inIframe = window.self !== window.top; } catch (e) { inIframe = true; }
+  if (reduce || inIframe) {
     document.querySelectorAll('.reveal, .duo-card').forEach(function (el) { el.classList.add('in'); });
     return;
   }
