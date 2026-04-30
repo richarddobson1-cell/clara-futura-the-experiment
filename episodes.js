@@ -41,6 +41,16 @@
     wrap.replaceChild(iframe, button);
   }
 
+  function initNativeVideos() {
+    document.querySelectorAll('.ep-video-native').forEach(function (wrap) {
+      var v = wrap.querySelector('video');
+      if (!v) return;
+      v.addEventListener('play', function () { wrap.classList.add('is-playing'); });
+      v.addEventListener('pause', function () { wrap.classList.remove('is-playing'); });
+      v.addEventListener('ended', function () { wrap.classList.remove('is-playing'); });
+    });
+  }
+
   function init() {
     var buttons = document.querySelectorAll('.ep-video-play[data-ytid], .ep-video[data-ytid] .ep-video-play');
     // Find buttons whose parent has data-ytid
@@ -54,6 +64,7 @@
         play(btn, ytid, title);
       });
     });
+    initNativeVideos();
   }
 
   if (document.readyState === 'loading') {
