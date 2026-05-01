@@ -577,36 +577,6 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
-/* Native HTML5 video (self-hosted companion film) */
-.ep-video-native {
-  position: relative;
-}
-.ep-video-el {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  background: var(--navy-2);
-  display: block;
-  outline: none;
-  transition: border-color 0.3s var(--ease);
-}
-.ep-video-el:hover { border-color: var(--amber-soft); }
-.ep-video-caption-native {
-  position: absolute;
-  left: 24px;
-  top: 22px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  pointer-events: none;
-  text-align: left;
-  z-index: 1;
-  transition: opacity 0.4s var(--ease);
-}
-.ep-video-native.is-playing .ep-video-caption-native { opacity: 0; }
-
 /* Pending video state for upcoming episodes */
 .ep-video.pending {
   margin-bottom: 36px;
